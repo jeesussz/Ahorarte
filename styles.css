@@ -37,24 +37,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   padding: 0.72rem 4vw;
   backdrop-filter: blur(10px);
   background: rgba(166, 236, 242, 0.8);
   border-bottom: 2px solid rgba(176, 47, 110, 0.22);
-}
-
-.ad-body {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  padding-top: 1rem;
-}
-
-.ad-body .adsbygoogle {
-  min-height: 180px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.7);
 }
 
 .logo-link {
@@ -602,10 +591,6 @@ body {
   }
 
   .faq-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ad-body {
     grid-template-columns: 1fr;
   }
 

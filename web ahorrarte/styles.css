@@ -30,39 +30,6 @@ body {
   overflow-x: hidden;
 }
 
-.ad-sidebar {
-  display: none;
-}
-
-@media (min-width: 1400px) {
-  body {
-    padding-left: 140px;
-    padding-right: 140px;
-  }
-
-  .ad-sidebar {
-    display: block;
-    position: fixed;
-    top: 120px;
-    width: 120px;
-    z-index: 30;
-  }
-
-  .ad-sidebar-left {
-    left: 10px;
-  }
-
-  .ad-sidebar-right {
-    right: 10px;
-  }
-
-  .ad-sidebar .adsbygoogle {
-    min-height: 600px;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -70,6 +37,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   padding: 0.72rem 4vw;
   backdrop-filter: blur(10px);
   background: rgba(166, 236, 242, 0.8);
