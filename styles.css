@@ -30,39 +30,6 @@ body {
   overflow-x: hidden;
 }
 
-.ad-sidebar {
-  display: none;
-}
-
-@media (min-width: 1400px) {
-  body {
-    padding-left: 140px;
-    padding-right: 140px;
-  }
-
-  .ad-sidebar {
-    display: block;
-    position: fixed;
-    top: 120px;
-    width: 120px;
-    z-index: 30;
-  }
-
-  .ad-sidebar-left {
-    left: 10px;
-  }
-
-  .ad-sidebar-right {
-    right: 10px;
-  }
-
-  .ad-sidebar .adsbygoogle {
-    min-height: 600px;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -74,6 +41,20 @@ body {
   backdrop-filter: blur(10px);
   background: rgba(166, 236, 242, 0.8);
   border-bottom: 2px solid rgba(176, 47, 110, 0.22);
+}
+
+.ad-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.ad-body .adsbygoogle {
+  min-height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .logo-link {
@@ -621,6 +602,10 @@ body {
   }
 
   .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-body {
     grid-template-columns: 1fr;
   }
 
