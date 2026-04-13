@@ -1,0 +1,684 @@
+:root {
+  --bg-sky: #a6ecf2;
+  --bg-cream: #f7fdff;
+  --pink-main: #e54694;
+  --pink-soft: #f8c6df;
+  --pig-pink: #f189b7;
+  --ink: #47263e;
+  --coin: #ffd44f;
+  --card: rgba(255, 255, 255, 0.7);
+  --shadow: 0 12px 40px rgba(71, 38, 62, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Patrick Hand", cursive;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(245, 252, 255, 0.78), rgba(245, 252, 255, 0.86)),
+    url("imagenes/CerdosFondo.webp") center / cover fixed no-repeat;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.ad-sidebar {
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  body {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+
+  .ad-sidebar {
+    display: block;
+    position: fixed;
+    top: 120px;
+    width: 120px;
+    z-index: 30;
+  }
+
+  .ad-sidebar-left {
+    left: 10px;
+  }
+
+  .ad-sidebar-right {
+    right: 10px;
+  }
+
+  .ad-sidebar .adsbygoogle {
+    min-height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.72rem 4vw;
+  backdrop-filter: blur(10px);
+  background: rgba(166, 236, 242, 0.8);
+  border-bottom: 2px solid rgba(176, 47, 110, 0.22);
+}
+
+.logo-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 450px;
+  height: 82px;
+  text-decoration: none;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 450px;
+  height: auto;
+}
+
+.brand-word {
+  font-family: "Luckiest Guy", cursive;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  letter-spacing: 0.03em;
+  -webkit-text-stroke: 1.5px #8a2d63;
+  text-shadow:
+    2px 2px 0 rgba(255, 255, 255, 0.92),
+    0 6px 10px rgba(138, 45, 99, 0.25);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.brand-light {
+  color: #f6aed4;
+}
+
+.brand-dark {
+  color: #d63d8a;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.46rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(176, 47, 110, 0.16);
+  box-shadow: 0 4px 0 rgba(176, 47, 110, 0.18);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.main-nav a:hover {
+  transform: translateY(-3px);
+  background: var(--pink-soft);
+  box-shadow: 0 7px 0 rgba(176, 47, 110, 0.16);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.section {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: 4.5rem 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-family: "Baloo 2", sans-serif;
+  margin: 0;
+  font-size: clamp(2.3rem, 6vw, 5rem);
+  color: var(--pink-main);
+  line-height: 0.95;
+  text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.8);
+}
+
+.hero-copy .author {
+  font-family: "Baloo 2", sans-serif;
+  margin-top: 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.hero-copy p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.pill {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--coin);
+  color: #5f4600;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 0.6rem;
+  text-decoration: none;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1.16rem;
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(120deg, #d83c87 0%, #f471af 100%);
+  padding: 0.78rem 1.35rem;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 0 #a62663;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.cta-buy {
+  background: linear-gradient(120deg, #ffcf4f 0%, #ffdf83 100%);
+  color: #5f4600;
+  box-shadow: 0 8px 0 #c99d2a;
+}
+
+.cta-buy:hover {
+  box-shadow: 0 10px 0 #c99d2a;
+}
+
+.cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 0 #a62663;
+  filter: saturate(1.08);
+}
+
+.cta:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 0 #a62663;
+}
+
+.hero-shop {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  border: 2px solid rgba(176, 47, 110, 0.15);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.book-covers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.hero-cover img,
+.back-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  border: 5px solid rgba(255, 255, 255, 0.9);
+}
+
+.hero-cover,
+.back-cover {
+  margin: 0;
+}
+
+.buy-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.8rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+.buy-panel p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+.buy-panel .cta-buy {
+  align-self: center;
+}
+
+.about {
+  max-width: 760px;
+}
+
+.about h2,
+.learn h2 {
+  font-family: "Baloo 2", sans-serif;
+  margin-top: 0;
+  color: #d83c87;
+  font-size: clamp(1.7rem, 4.5vw, 3rem);
+  line-height: 1.05;
+}
+
+.about p {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.learn .cards {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 22px;
+  border: 2px solid rgba(71, 38, 62, 0.14);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  font-family: "Baloo 2", sans-serif;
+  margin: 0;
+  font-size: 1.45rem;
+  color: #b02f6e;
+}
+
+.card p {
+  margin: 0.35rem 0 0;
+  font-size: 1.08rem;
+}
+
+.faq-section h2 {
+  font-family: "Baloo 2", sans-serif;
+  margin-top: 0;
+  color: #d83c87;
+  font-size: clamp(1.7rem, 4.5vw, 3rem);
+  line-height: 1.05;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 22px;
+  border: 2px solid rgba(71, 38, 62, 0.14);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-family: "Baloo 2", sans-serif;
+  color: #b02f6e;
+  font-size: 1.35rem;
+}
+
+.faq-item p {
+  margin: 0.45rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.video-section {
+  max-width: 1100px;
+}
+
+.video-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 26px;
+  border: 2px solid rgba(176, 47, 110, 0.2);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1.1rem 1.4rem;
+}
+
+.video-card h2 {
+  font-family: "Baloo 2", sans-serif;
+  margin: 0;
+  color: #d83c87;
+  font-size: clamp(1.8rem, 4.6vw, 3rem);
+}
+
+.video-card p {
+  margin: 0.45rem auto 0;
+  font-size: 1.25rem;
+  max-width: 720px;
+}
+
+.video-frame {
+  width: min(960px, 100%);
+  margin: 1rem auto 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(71, 38, 62, 0.22);
+  border: 4px solid rgba(255, 255, 255, 0.9);
+}
+
+.video-frame iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
+.cta-video {
+  margin-top: 1rem;
+  background: linear-gradient(120deg, #ff6f8f 0%, #d63d8a 100%);
+  box-shadow: 0 8px 0 #8e2a5b;
+}
+
+.cta-video:hover {
+  box-shadow: 0 10px 0 #8e2a5b;
+}
+
+.press h2,
+.author-section h2 {
+  font-family: "Baloo 2", sans-serif;
+  margin-top: 0;
+  color: #d83c87;
+  font-size: clamp(1.7rem, 4.5vw, 3rem);
+  line-height: 1.05;
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.panel,
+.author-card {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 22px;
+  border: 2px solid rgba(71, 38, 62, 0.14);
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.author-card {
+  text-align: center;
+}
+
+.panel h3 {
+  font-family: "Baloo 2", sans-serif;
+  margin: 0;
+  color: #b02f6e;
+  font-size: 1.35rem;
+}
+
+.panel p,
+.author-card p {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.author-card p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.author-section {
+  max-width: 920px;
+}
+
+.author-name {
+  font-family: "Baloo 2", sans-serif;
+  margin: 0;
+  font-size: 1.35rem;
+  color: #8a2d63;
+  font-weight: 800;
+}
+
+.author-photo {
+  margin: 0 auto 0.95rem;
+  width: min(360px, 100%);
+}
+
+.author-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.instagram-section {
+  max-width: 860px;
+}
+
+.instagram-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 24px;
+  border: 2px dashed rgba(176, 47, 110, 0.35);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1rem 1.35rem;
+}
+
+.instagram-card h2 {
+  font-family: "Baloo 2", sans-serif;
+  margin: 0;
+  color: #d83c87;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+}
+
+.instagram-card p {
+  margin: 0.5rem auto 0;
+  font-size: 1.24rem;
+  max-width: 620px;
+}
+
+.cta-instagram {
+  margin-top: 0.9rem;
+  background: linear-gradient(120deg, #f29fca 0%, #d63d8a 100%);
+  box-shadow: 0 8px 0 #8e2a5b;
+}
+
+.cta-instagram:hover {
+  box-shadow: 0 10px 0 #8e2a5b;
+}
+
+.author-card blockquote {
+  margin: 1rem auto 0;
+  padding: 0.7rem 0.9rem;
+  border-left: 4px solid #e54694;
+  background: rgba(246, 174, 212, 0.28);
+  border-radius: 10px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.3rem;
+  max-width: 760px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem 2.8rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #7a3f60;
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+}
+
+.site-footer a {
+  color: #b02f6e;
+  font-weight: 800;
+  text-decoration-thickness: 2px;
+}
+
+.site-footer a:hover {
+  color: #7f1f4e;
+}
+
+.insta-link {
+  margin: 0.5rem auto 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(176, 47, 110, 0.22);
+}
+
+.insta-link svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.insta-link .dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.insta-link span {
+  font-weight: 800;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .learn .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .press-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-frame {
+    width: 100%;
+  }
+
+  .logo {
+    width: 290px;
+  }
+
+  .logo-link {
+    width: 290px;
+    height: 58px;
+  }
+
+  .brand-word {
+    font-size: 1.6rem;
+    -webkit-text-stroke: 1.5px #8a2d63;
+  }
+
+  .main-nav {
+    position: absolute;
+    right: 4vw;
+    top: 86px;
+    width: min(280px, 88vw);
+    padding: 0.7rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(71, 38, 62, 0.18);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-covers {
+    grid-template-columns: 1fr;
+  }
+
+  .buy-panel {
+    align-items: flex-start;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    border: 0;
+    background: var(--pink-main);
+    color: white;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+      border-radius: 999px;
+      padding: 0.45rem 0.95rem;
+      box-shadow: 0 5px 0 #a62663;
+  }
+}
