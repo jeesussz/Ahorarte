@@ -30,6 +30,62 @@ body {
   overflow-x: hidden;
 }
 
+.page-shell {
+  width: min(1480px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(120px, 170px) minmax(0, 1fr) minmax(120px, 170px);
+  gap: 1rem;
+  align-items: start;
+}
+
+main {
+  min-width: 0;
+}
+
+.side-rail {
+  position: sticky;
+  top: 104px;
+  align-self: start;
+  padding: 1.25rem 0.5rem;
+}
+
+.ad-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 2px solid rgba(176, 47, 110, 0.18);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 0.8rem;
+}
+
+.ad-tag {
+  margin: 0 0 0.6rem;
+  text-align: center;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #8a2d63;
+}
+
+.ad-space {
+  min-height: 520px;
+  border-radius: 16px;
+  border: 2px dashed rgba(176, 47, 110, 0.28);
+  background: linear-gradient(180deg, rgba(248, 198, 223, 0.35), rgba(166, 236, 242, 0.45));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+
+.ad-space span {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #7a3f60;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -574,6 +630,23 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+@media (max-width: 1200px) {
+  .page-shell {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .side-rail {
+    position: static;
+    padding: 0 1rem;
+  }
+
+  .ad-space {
+    min-height: 140px;
+  }
 }
 
 @media (max-width: 900px) {
