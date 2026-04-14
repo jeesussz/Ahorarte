@@ -354,15 +354,16 @@
       </a>
     </footer>
 
-    <script>
-      document.querySelectorAll('.adsbygoogle').forEach(() => {
-        try {
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (error) {
-          console.warn('AdSense no disponible todavía', error);
-        }
-      });
-    </script>
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+      <p>
+        Esta web usa cookies propias y de terceros para mejorar la experiencia y
+        mostrar anuncios de AdSense. Puedes aceptar o rechazar su uso.
+      </p>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-accept" id="accept-cookies" type="button">Aceptar</button>
+        <button class="cookie-btn cookie-reject" id="reject-cookies" type="button">Rechazar</button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

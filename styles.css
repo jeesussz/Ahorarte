@@ -600,6 +600,60 @@ main {
   font-weight: 800;
 }
 
+.cookie-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  width: min(920px, calc(100vw - 1.2rem));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  background: rgba(71, 38, 62, 0.95);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
+  z-index: 120;
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.cookie-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cookie-accept {
+  background: #ffd44f;
+  color: #5f4600;
+}
+
+.cookie-reject {
+  background: #ffffff;
+  color: #47263e;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px) scale(0.98);
@@ -619,12 +673,11 @@ main {
   }
 
   .side-rail {
-    position: static;
-    padding: 0 1rem;
+    display: none;
   }
 
   .side-adsense {
-    min-height: 120px;
+    min-height: 0;
   }
 }
 
@@ -689,6 +742,11 @@ main {
 
   .main-nav.open {
     display: flex;
+  }
+
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .menu-toggle {
