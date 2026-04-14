@@ -131,13 +131,15 @@
     </header>
 
     <div class="page-shell">
-      <aside class="side-rail" aria-label="Publicidad lateral izquierda">
-        <div class="ad-card">
-          <p class="ad-tag">Publicidad</p>
-          <div class="ad-space">
-            <span>Espacio listo para AdSense</span>
-          </div>
-        </div>
+      <aside class="side-rail side-rail-left" aria-label="Anuncio lateral izquierdo">
+        <ins
+          class="adsbygoogle side-adsense"
+          style="display:block"
+          data-ad-client="ca-pub-5490681161094417"
+          data-ad-slot="1234567890"
+          data-ad-format="auto"
+          data-full-width-responsive="false"
+        ></ins>
       </aside>
 
       <main>
@@ -328,13 +330,15 @@
         </section>
       </main>
 
-      <aside class="side-rail" aria-label="Publicidad lateral derecha">
-        <div class="ad-card">
-          <p class="ad-tag">Publicidad</p>
-          <div class="ad-space">
-            <span>Espacio listo para AdSense</span>
-          </div>
-        </div>
+      <aside class="side-rail side-rail-right" aria-label="Anuncio lateral derecho">
+        <ins
+          class="adsbygoogle side-adsense"
+          style="display:block"
+          data-ad-client="ca-pub-5490681161094417"
+          data-ad-slot="1234567891"
+          data-ad-format="auto"
+          data-full-width-responsive="false"
+        ></ins>
       </aside>
     </div>
 
@@ -350,6 +354,15 @@
       </a>
     </footer>
 
+    <script>
+      document.querySelectorAll('.adsbygoogle').forEach(() => {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (error) {
+          console.warn('AdSense no disponible todavía', error);
+        }
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
