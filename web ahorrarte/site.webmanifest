@@ -1,0 +1,25 @@
+{
+  "name": "Ahorrarte",
+  "short_name": "Ahorrarte",
+  "description": "Web oficial del libro Ahorrarte.",
+  "lang": "es-ES",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff8e9",
+  "theme_color": "#e54694",
+  "icons": [
+    {
+      "src": "imagenes/ahorrarte_48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "imagenes/favicono-logo.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
